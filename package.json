@@ -1,0 +1,34 @@
+{
+  "name": "danbi",
+  "version": "1.0.0",
+  "description": "Experimental NES Emulator",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:untouched": "asc src/index.ts --target debug",
+    "asbuild:optimized": "asc src/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrendanReilly/danbi.git"
+  },
+  "keywords": [
+    "nes",
+    "emulation",
+    "emulator"
+  ],
+  "author": "Brendan T. Reilly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrendanReilly/danbi/issues"
+  },
+  "homepage": "https://github.com/BrendanReilly/danbi#readme",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.31"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.18.31"
+  }
+}
