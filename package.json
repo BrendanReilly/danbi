@@ -1,34 +1,56 @@
 {
-  "name": "danbi",
-  "version": "1.0.0",
-  "description": "Experimental NES Emulator",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "node tests",
-    "asbuild:untouched": "asc src/index.ts --target debug",
-    "asbuild:optimized": "asc src/index.ts --target release",
-    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BrendanReilly/danbi.git"
-  },
-  "keywords": [
-    "nes",
-    "emulation",
-    "emulator"
-  ],
-  "author": "Brendan T. Reilly",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/BrendanReilly/danbi/issues"
-  },
-  "homepage": "https://github.com/BrendanReilly/danbi#readme",
-  "dependencies": {
-    "@assemblyscript/loader": "^0.18.31"
-  },
-  "devDependencies": {
-    "assemblyscript": "^0.18.31"
-  }
+    "name": "danbi",
+    "version": "1.0.0",
+    "description": "Experimental NES Emulator",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "node tests",
+        "asbuild:untouched": "asc src/index.ts --target debug",
+        "asbuild:optimized": "asc src/index.ts --target release",
+        "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BrendanReilly/danbi.git"
+    },
+    "keywords": [
+        "nes",
+        "emulation",
+        "emulator"
+    ],
+    "author": "Brendan T. Reilly",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/BrendanReilly/danbi/issues"
+    },
+    "homepage": "https://github.com/BrendanReilly/danbi#readme",
+    "dependencies": {
+        "@assemblyscript/loader": "^0.18.31"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.23.0",
+        "@typescript-eslint/parser": "^4.23.0",
+        "assemblyscript": "^0.18.31",
+        "eslint": "^7.26.0",
+        "tslint": "^6.1.3",
+        "typescript": "^4.2.4"
+    },
+    "prettier": {
+        "trailingComma": "none",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    },
+    "eslintConfig": {
+        "root": true,
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+            "@typescript-eslint"
+        ],
+        "extends": [
+            "eslint:recommended",
+            "plugin:@typescript-eslint/recommended"
+        ]
+    }
 }
